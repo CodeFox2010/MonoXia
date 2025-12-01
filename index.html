@@ -1,45 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>MonoXia</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comment fonctionnent les moteurs de recherche</title>
+<style>
+  /* Google Fonts for modern look */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+  /* Reset some default styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  /* Frosted glass container */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    max-width: 900px;
+    animation: fadeIn 2s ease forwards;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideIn 1s ease forwards;
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s forwards;
+  }
+
+  p:nth-child(2) { animation-delay: 0.3s; }
+  p:nth-child(3) { animation-delay: 0.5s; }
+  p:nth-child(4) { animation-delay: 0.7s; }
+  p:nth-child(5) { animation-delay: 0.9s; }
+  p:nth-child(6) { animation-delay: 1.1s; }
+  p:nth-child(7) { animation-delay: 1.3s; }
+  p:nth-child(8) { animation-delay: 1.5s; }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95);}
+    to { opacity: 1; transform: scale(1);}
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .glass {
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
 </head>
 <body>
-  <div class="content" id="rootCard">
-    <h1>MonoXia</h1>
-    <p id="intro"><strong>Our philosophy is to observe nature, then copy nature.</strong><br>We observe nature — not to tame it, but to learn.</p>
-    <p><em>Concepts are still underground. Growing slowly, Quietly waiting to bloom.</em></p>
-
-    <div class="note"><br>
-      This is the root.<br>
-      <div id="text">
-      Projects, thoughts, and future will all start from here.<br>
-      No roadmap. Just intuition and soil.<br>
-      </div>
-    </div>
+  <div class="glass">
+    <h1>Comment fonctionnent les moteurs de recherche</h1>
+    <p>On utilise les moteurs de recherche tous les jours, que ce soit Google, Bing ou DuckDuckGo, mais beaucoup de gens ignorent. C’est quoi un moteur de recherche et comment ça fonctionne ? D’abord, le moteur de recherche est un programme conçu pour rechercher sur le Web des documents qui contiennent les mots clés insérés par l’utilisateur dans la barre de recherche. Mais comment ce programme arrive-t-il à trouver les pages qui contiennent ce qu’on cherche ? Et comment détermine-t-il quelle page doit être en haut ?</p>
+    <p>Quand tu cherches quelque chose, le moteur de recherche ne cherche pas tout l’Internet en temps réel, parce qu’on a des billions de sites Web et des centaines qui sont créés chaque seconde. Alors, s’il cherche chaque site Web en temps réel, ça prendrait toujours. C’est pour ça que les moteurs de recherche utilisent un programme qui s’appelle le Spider.</p>
+    <p>Voici comment ça marche : L’Internet est un réseau de pages connectées l’une à l’autre par des hyperlinks. Les moteurs de recherche exécutent constamment ce programme (Spider) qui traverse chaque hyperlink. Il trouve pour créer un index qui contient presque chaque page dans ce réseau. Chaque entrée dans l’index contient des informations sur la page vers laquelle elle pointe. Chaque fois qu’il visite une page, il collecte des informations qu’il pourrait avoir besoin d’elles pour effectuer une recherche dans le futur.</p>
+    <p>Par exemple, quand tu recherches « combien ça prend pour voyager vers Mars ? », le moteur de recherche cherche chaque entrée dans ta requête sur l’index pour avoir une liste de toutes les pages qui référencent chaque mot. Mais cela peut résulter en billions de résultats. C’est pour ça qu’il doit déterminer les meilleurs résultats pour les mettre en haut. Et pour ça, il pose beaucoup de questions comme : Quelle est la fréquence à laquelle ces mots se répètent dans le contenu de la page ? Comment s’arrangent-elles ? Est-ce qu’elles apparaissent dans le titre, le contenu ou l’URL ? Est-ce que la page inclut des synonymes des mots dans ta requête ? Est-ce que la page est réputée, etc.</p>
+    <p>Toutes ces questions aident à déterminer quelles pages apparaissent en haut des résultats. L’interface du moteur te montre les résultats : chaque entrée inclut un titre, l’URL et un échantillon du texte pour t’aider à décider. Si la page contient ce que tu cherches, les moteurs peuvent aussi suggérer des recherches qui peuvent t’intéresser, et parfois des définitions et informations en un coup d’œil qui peuvent t’aider à trouver ce que tu cherches plus vite.</p>
+    <p>Google a inventé l’algorithme de recherche le plus fameux, qui prend en compte combien de pages réfèrent vers une page. L’idée : si beaucoup de pages pensent qu’une page est intéressante, cette page est probablement celle que tu cherches. Cet algorithme s’appelle PageRank, appelé d’après son inventeur Larry Page, cofondateur de Google.</p>
+    <p>Les moteurs de recherche sont en évolution constante pour retourner des meilleurs résultats plus vite. Aujourd’hui, les moteurs de recherche utilisent des infos que tu n’as pas explicitement autorisées. Par exemple, si tu cherches « parc zoologique », la majorité des moteurs de recherche affichent les résultats des parcs de ta région, même si tu n’as pas précisé ta localisation dans la barre de recherche.</p>
+    <p>Les moteurs de recherche modernes comprennent aussi le contexte. Par exemple, si tu cherches « coupe mondiale », il sait que tu réfères au prix qu’on gagne dans un tournoi de football international, mais si tu cherches « coupe casquette », il sait que tu es en train de chercher un style de cheveux. Pour comprendre le contexte mieux, on utilise un type d’intelligence artificielle qui s’appelle ML, qui permet aux ordinateurs d’apprendre comme les êtres humains.</p>
+    <p>Les moteurs de recherche sont un outil qui nous rend la navigation sur Internet plus facile et intuitive.</p>
   </div>
-<div class="content" >
-  <p id="text">
-This is the start of our journey toward a greener future!
-Here lies the seed of our company — how it all began.
-This seed was planted on June 18, 2025, at 8:08 PM.
-You can access the prototypes I came up with through the button below or via the GitHub repository linked in the other button.
-I really hope this becomes real 😁😁😁
-  </p>
-</div>
-<div class="button-container">
-  <a href="index2.html" class="btn">See Prototypes</a>
-  <a href="https://github.com/CodeFox2010/Marishia-Downloads" class="btn">GitHub Repo</a>
-</div>
-<footer id="siteFooter" class="site-footer">
-  <div class="footer-content">
-    <h2>Thank you for visiting 🌿</h2>
-    <p>Hosted on GitHub — built with care an a tad bit AI ( because I was quite busy at the time ) on 18 June 2025</p>
-    </p>
-  </div>
-</footer>
-
-  <script src="script.js" defer></script>
 </body>
 </html>
