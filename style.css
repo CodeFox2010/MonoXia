@@ -12,6 +12,8 @@ body {
   background-position: center center;
   background-color: #1f1f1f; 
   color: #f5f5f5;
+  min-height: 100vh;
+  padding-bottom: 60px;
 }
 
 .content {
@@ -21,6 +23,7 @@ body {
   background: rgba(236, 231, 225, 0.9);
   animation: slideUp 1.5s ease-out;
 }
+
 h1 {
   font-size: 3rem;
   color: #3a2e2e;
@@ -48,6 +51,7 @@ em {
     opacity: 1;
   }
 }
+
 #rootCard {
   transition: all 0.5s ease;
   border-radius: 1rem;
@@ -80,10 +84,12 @@ em {
   color: #3b2f2f;
   padding: 3rem;
 }
-#intro{
+
+#intro {
   font-size: 1rem;
   color: #3b2f2f;
 }
+
 .button-container {
   margin-top: 3rem;
   display: flex;
@@ -109,16 +115,18 @@ em {
   background-color: #8b5235;
   transform: scale(1.05);
 }
+
 .site-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%
+  width: 100%;
   background-color: #2e2e2e;
   color: #ccc;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  margin-top: 3rem;
+  z-index: 2000;
 }
+
