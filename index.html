@@ -1,188 +1,45 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> L'aspirine</title></title>
-<style>
-
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    background: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=2030&auto=format&fit=crop') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-  }
-
-  .glass {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    padding: 3rem;
-    max-width: 900px;
-    animation: fadeIn 2s ease forwards;
-  }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    font-size: 2rem;
-    background: linear-gradient(90deg, #ff8a00, #e52e71);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: slideIn 1s ease forwards;
-  }
-
-  p {
-   text-align: center;
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    font-size: 1.1rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s forwards;
-    color: black;
-    mix-blend-mode: difference;
-    font-size: 1.25rem;
-    text-shadow:
-    -1px -1px 0 orange,
-     1px -1px 0 grey,
-    -1px  1px 0 orange,
-     1px  1px 0 grey;
-  }
-
-  p:nth-child(2) { animation-delay: 0.3s; }
-  p:nth-child(3) { animation-delay: 0.5s; }
-  p:nth-child(4) { animation-delay: 0.7s; }
-  p:nth-child(5) { animation-delay: 0.9s; }
-  p:nth-child(6) { animation-delay: 1.1s; }
-  p:nth-child(7) { animation-delay: 1.3s; }
-  p:nth-child(8) { animation-delay: 1.5s; }
-
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95);}
-    to { opacity: 1; transform: scale(1);}
-  }
-
-  @keyframes slideIn {
-    from { opacity: 0; transform: translateY(-20px);}
-    to { opacity: 1; transform: translateY(0);}
-  }
-
-  @keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0);}
-  }
-
-  @media (max-width: 600px) {
-    .glass {
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-    }
-}
-</style>
+  <meta charset="UTF-8">
+  <title>MonoXia</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="glass">
-    <header style="text-align: center; margin-bottom: 40px; border-bottom: 3px double rgba(255,255,255,0.3); padding-bottom: 20px;">
-      <h1 style="font-size: 2.8em; color: #1a2a6c; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">الأسبرين: ملحمة العلم والابتكار</h1>
-      <p style="font-size: 1.2em; color: #444;">تأريخ دقيق للمركب الذي غيّر وجه الطب البشري</p>
-    </header>
+  <div class="content" id="rootCard">
+    <h1>MonoXia</h1>
+    <p id="intro"><strong>Our philosophy is to observe nature, then copy nature.</strong><br>We observe nature — not to tame it, but to learn.</p>
+    <p><em>Concepts are still underground. Growing slowly, Quietly waiting to bloom.</em></p>
 
-    <section style="margin-bottom: 35px;">
-      <h2 style="color: #c0392b; border-right: 5px solid #c0392b; padding-right: 15px;">1. من صنع الأسبرين؟ وكيف؟</h2>
-      <p>على الرغم من أن مادة "الساليسين" كانت معروفة، إلا أن الفضل في ابتكار الشكل الصيدلاني المستقر يعود إلى الكيميائي الألماني <strong>فليكس هوفمان (Felix Hoffmann)</strong> في عام 1897.</p>
-      
-      <div style="background: rgba(255,255,255,0.3); padding: 20px; border-radius: 15px; margin: 15px 0;">
-        <h3>قصة الاختراع: دافع إنساني</h3>
-        <p>لم يكن هوفمان يسعى وراء الربح فقط؛ كان والده يعاني من آلام الروماتيزم المزمنة، وكان يتناول "حمض الساليسيليك" الخام الذي كان طعمه سيئاً جداً ويسبب له قيئاً وتهيجاً حاداً في المعدة. أخذ هوفمان على عاتقه مهمة "تعديل" هذا الحمض لجعله أقل عدوانية.</p>
-        <strong>كيف فعل ذلك؟</strong>
-        <p>قام هوفمان بإجراء عملية كيميائية تُعرف بـ <em>"الأسيتلة"</em>، حيث أضاف مجموعة "الأسيتيل" إلى حمض الساليسيليك باستخدام <strong>أنهيدريد الأسيتيك</strong>. هذا التعديل البسيط في الهيكل الجزيئي جعل المادة تمر عبر المعدة بسلام أكبر قبل أن تتحلل في الأمعاء، مما أنتج "حمض الأسيتيل ساليسيليك" النقي والمستقر.</p>
+    <div class="note"><br>
+      This is the root.<br>
+      <div id="text">
+      Projects, thoughts, and future will all start from here.<br>
+      No roadmap. Just intuition and soil.<br>
       </div>
-      
-      <p style="font-style: italic; font-size: 0.9em; color: #666;">*ملاحظة تاريخية: هناك جدل حول دور "آرثر أيشنغرون"، رئيس هوفمان، الذي زعم لاحقاً أنه هو من خطط للتفاعل، لكن سجلات شركة باير الرسمية تمنح الفضل لهوفمان.</p>
-    </section>
-
-    <section style="margin-bottom: 35px;">
-      <h2 style="color: #c0392b; border-right: 5px solid #c0392b; padding-right: 15px;">2. التسلسل الزمني العميق (من 3000 ق.م إلى اليوم)</h2>
-      <ul style="line-height: 2;">
-        <li><strong>3000 قبل الميلاد:</strong> السومريون يسجلون استخدام أوراق الصفصاف لتسكين الألم على الألواح الطينية.</li>
-        <li><strong>القرن الخامس قبل الميلاد:</strong> أبقراط يكتب عن "اللعاب المر" المستخلص من قشرة الصفصاف الذي يخفف آلام المخاض.</li>
-        <li><strong>1824:</strong> الكيميائي الإيطالي <strong>فرانشيسكو فونتانا</strong> ينجح في استخلاص المادة الفعالة بشكل بدائي.</li>
-        <li><strong>1838:</strong> الإيطالي <strong>رافائيل بيريا</strong> يتمكن من تحويل الساليسين إلى حمض قوي أسماه "حمض الساليسيليك".</li>
-        <li><strong>1899:</strong> ولادة العلامة التجارية "Aspirin". حرف <strong>"A"</strong> يرمز للأسيتيل، و <strong>"Spir"</strong> مشتق من نبات <em>Spiraea ulmaria</em> (مصدر طبيعي آخر للساليسيلات).</li>
-        <li><strong>1950:</strong> دخل الأسبرين موسوعة جينيس كأكثر مسكن مبيعاً في العالم.</li>
-        <li><strong>1971:</strong> العالم <strong>جون فين</strong> يكتشف آلية عمل الأسبرين في تثبيط البروستاجلاندينات، وينال عنها جائزة نوبل لاحقاً.</li>
-      </ul>
-    </section>
-
-    <section style="margin-bottom: 35px;">
-      <h2 style="color: #c0392b; border-right: 5px solid #c0392b; padding-right: 15px;">3. التصنيع: مختبر الجامعة مقابل عملاق الصناعة</h2>
-      
-      <h3>التخليق المخبري (الخطوات الدقيقة)</h3>
-      <p>للحصول على أسبرين نقي في المختبر، نتبع بروتوكولاً صارماً:</p>
-      <ol>
-        <li>تفاعل حمض الساليسيليك (C7H6O3) مع فائض من أنهيدريد الأسيتيك (C4H6O3).</li>
-        <li>استخدام <strong>حمض الكبريتيك المركز</strong> كعامل حفاز لخفض طاقة التنشيط.</li>
-        <li>التبريد المفاجئ في حمام ثلجي لتحفيز "النواة البلورية".</li>
-        <li>الترشيح تحت الضغط باستخدام "قمع بوخنر".</li>
-      </ol>
-      
-
-      <h3>التصنيع الصناعي (Scale-up)</h3>
-      <p>في المصانع، يتم التحكم في حجم البلورات بدقة متناهية؛ لأن حجم البلورة يؤثر على سرعة ذوبان القرص في معدة المريض. يتم استخدام تقنيات "التجفيف بالرذاذ" و"الكبس المباشر" لإنتاج ملايين الأقراص يومياً دون لمس بشري.</p>
-    </section>
-
-    <section style="margin-bottom: 35px;">
-      <h2 style="color: #c0392b; border-right: 5px solid #c0392b; padding-right: 15px;">4. الاستخدامات الطبية والتحذيرات</h2>
-      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 250px; background: rgba(46, 204, 113, 0.1); padding: 15px; border-radius: 10px;">
-          <h4 style="color: #27ae60;">الاستخدامات</h4>
-          <ul>
-            <li>مميّع للدم للوقاية من الجلطات.</li>
-            <li>علاج النوبات القلبية الحادة (مضغ القرص).</li>
-            <li>تقليل مخاطر أنواع معينة من السرطانات.</li>
-          </ul>
-        </div>
-        <div style="flex: 1; min-width: 250px; background: rgba(231, 76, 60, 0.1); padding: 15px; border-radius: 10px;">
-          <h4 style="color: #c0392b;">الآثار الجانبية</h4>
-          <ul>
-            <li>نزيف الجهاز الهضمي.</li>
-            <li>طنين الأذن (علامة على الجرعة الزائدة).</li>
-            <li>صدمة الحساسية (في حالات نادرة).</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <footer style="margin-top: 50px; padding: 30px; background: rgba(0,0,0,0.05); border-radius: 20px; text-align: justify; line-height: 1.8;">
-      <h2 style="text-align: center; color: #1a2a6c;">خاتمة: أكثر من مجرد قرص دواء</h2>
-      <p>
-        إن قصة الأسبرين ليست مجرد سرد لتفاعل كيميائي بين حمض وأنهيدريد، بل هي تجسيد للرحلة البشرية في ترويض الطبيعة. من مضغ أغصان الصفصاف على ضفاف الأنهار القديمة، إلى المفاعلات النووية الكيميائية الحديثة، يظل الأسبرين شاهداً على ذكاء الإنسان وإصراره على تخفيف الألم. 
-      </p>
-      <p>
-        لقد تجاوز الأسبرين كونه "مسكناً للصداع" ليصبح أيقونة ثقافية وعلمية؛ فهو الدواء الذي سافر مع رواد الفضاء إلى القمر في رحلة "أبولو 11"، وهو الدواء الذي لا يزال ينقذ حياة الآلاف يومياً من السكتات القلبية. وبينما تظهر أدوية بيولوجية وجينية معقدة كل يوم، يبقى هذا الجزيء البسيط المكون من 21 ذرة فقط، يتربع على عرش الصيدلة العالمية، مذكراً إيانا بأن أعظم الحلول قد تكمن في أبسط التعديلات الكيميائية. إن استمرارية الأسبرين لأكثر من 125 عاماً في سوق الأدوية المتغير بسرعة، تؤكد أنه ليس مجرد منتج تجاري، بل هو "صديق البشرية" الذي لا يشيخ.
-      </p>
-      <p style="text-align: center; font-weight: bold; margin-top: 20px; color: #c0392b;">
-        الأسبرين: رحلة بدأت بدمعة ألم من والد "هوفمان"، وانتهت بابتسامة شفاء لملايين البشر.
-      </p>
-    </footer>
+    </div>
   </div>
+<div class="content" >
+  <p id="text">
+This is the start of our journey toward a greener future!
+Here lies the seed of our company — how it all began.
+This seed was planted on June 18, 2025, at 8:08 PM.
+You can access the prototypes I came up with through the button below or via the GitHub repository linked in the other button.
+I really hope this becomes real 😁😁😁
+  </p>
+</div>
+<div class="button-container">
+  <a href="index2.html" class="btn">See Prototypes</a>
+  <a href="https://github.com/CodeFox2010/Marishia-Downloads" class="btn">GitHub Repo</a>
+</div>
+<footer id="siteFooter" class="site-footer">
+  <div class="footer-content">
+    <h2>Thank you for visiting 🌿</h2>
+    <p>Hosted on GitHub — built with care an a tad bit AI ( because I was quite busy at the time ) on 18 June 2025</p>
+    </p>
+  </div>
+</footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
