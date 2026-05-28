@@ -130,3 +130,28 @@ em {
   z-index: 2000;
 }
 
+@media (max-width: 600px) {
+  body {
+    padding-bottom: 80px;
+  }
+  .content {
+    padding: 3rem 1.25rem;
+    margin: 10px;
+    border-radius: 8px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #text {
+    padding: 1.5rem 0.5rem;
+  }
+  .button-container {
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .btn {
+    width: 100%;
+    padding: 1rem;
+  }
+}
